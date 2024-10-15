@@ -2,7 +2,17 @@
             background-color: #f8f9fa;
             font-family: Arial, sans-serif;
         }
-      
+        .container {
+  text-align: center; /* अगर आप कंटेनर का उपयोग कर रहे हैं */
+}
+   .box {
+  background-color: lightgreen;
+  border: none;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px auto; /* ऊपर और नीचे 10px का मार्जिन और क्षैतिज रूप से सेंटर */
+  border-radius: 5px;
+}
       .navbar {
     background-color:lightgreen; /* नेविगेशन बार का रंग बदलें */
 }
