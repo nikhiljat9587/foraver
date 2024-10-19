@@ -1,0 +1,82 @@
+  body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+  text-align: center; /* अगर आप कंटेनर का उपयोग कर रहे हैं */
+}
+   .box {
+  background-color: lightgreen;
+  border: none;
+  text-align: center;
+  font-size: 24px;
+  margin: 10px auto; /* ऊपर और नीचे 10px का मार्जिन और क्षैतिज रूप से सेंटर */
+  border-radius: 5px;
+}
+      .navbar {
+    background-color:lightgreen; /* नेविगेशन बार का रंग बदलें */
+}
+.bi { font-size: 5vw;
+    }
+     
+
+     .custom-card-body {
+    display: flex;
+    flex-direction: column; /* Ensures content is aligned vertically */
+    justify-content: space-between; /* Ensures content is spaced out */
+   background-color: lightgreen;
+    padding: 5px;
+    border-radius: 5px;
+    color: #333; /* Dark text color for contrast */
+}
+
+.custom-card-body .card-text {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 3.2vw;
+    color: black;
+}
+
+.custom-card-body .card-tex {
+    font-weight: bold;
+    font-size: 3.2vw;
+    color: red;
+    text-align: right;
+}
+.custom-card-body .ter{
+    margin-bottom: 5px;
+    font-weight: bold;
+     font-size: 5.6vw;
+   color: red;
+}
+.custom-card-body .ter-img{
+    height: 8vw;
+}
+.center{
+    text-align:center;
+    font-size: 8vw;
+    color: red;
+    font-weight: bold;
+}
+.centered-text {
+            text-align: center;
+            color: #888;
+            margin-top: 8px;
+        }
+
+
+
+        
+        .active1{
+            background-color: lightgreen ;
+            border-radius: 5px;
+           
+        }
+        .mar{
+            padding-top:1.5vw  ;
+        }
+        
+        
+        .marl{margin-left: 2.7vw;}
+    .dn{text-decoration: none;}
+   
