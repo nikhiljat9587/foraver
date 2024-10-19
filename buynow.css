@@ -18,7 +18,7 @@ h2 {
     color: #333;
 }
 
-.buy-now-btn {
+a.buy-now-btn {
     background-color: #28a745;
     color: white;
     padding: 15px;
@@ -29,6 +29,7 @@ h2 {
     cursor: pointer;
     width: 100%; /* Button will take full width */
     display: block; /* Ensures the button is block-level element */
+     text-decoration: none;
 }
 
 .buy-now-btn:hover {
