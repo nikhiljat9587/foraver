@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options with UPI Link</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .payment-option {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .payment-img {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+        }
+        .payment-name {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <h2>Choose Your Payment Method</h2>
+
+    <!-- Dynamic Price Display -->
+    <div class="price">Price: ₹<span id="price"></span></div>
+
+    <!-- PhonePe Payment Option -->
+    <div class="payment-option" onclick="payUsingUPI('phonepe')">
+        <img src="ppay.jpg" class="payment-img"  alt="PhonePe">
+        <div class="payment-name">PhonePe</div>
+    </div>
+
+    <!-- Paytm Payment Option -->
+    <div class="payment-option" onclick="payUsingUPI('paytm')">
+        <img src="papay.jpg" class="payment-img"  alt="Paytm">
+        <div class="payment-name">Paytm</div>
+    </div>
+
+    <!-- GPay Payment Option -->
+    <div class="payment-option" onclick="payUsingUPI('gpay')">
+        <img src="gpay.jpg" class="payment-img" alt="GPay">
+        <div class="payment-name">GPay</div>
+    </div>
+</div>
+
+<script>
+    // Dynamically set the price
+    let price = 1988; // You can change this value dynamically
+    document.getElementById('price').innerText = price;
+
+    // Function to handle UPI payment redirection
+    function payUsingUPI(method) {
+        let upiLink = '';
+
+        // Prepare UPI deep link based on the selected method
+        switch (method) {
+            case 'phonepe':
+                upiLink = `upi://pay?9587595583@paytm=your-upi-id@upi&NikhilJat=Your%20Name&am=${price}&cu=INR&tn=Payment%20for%20order`;
+                break;
+            case 'paytm':
+                upiLink = `upi://pay?9587595583@paytm=your-upi-id@paytm&NikhilJat=Your%20Name&am=${price}&cu=INR&tn=Payment%20for%20order`;
+                break;
+            case 'gpay':
+                upiLink = `upi://pay?9587595583@paytm=your-upi-id@okaxis&NikhilJat=Your%20Name&am=${price}&cu=INR&tn=Payment%20for%20order`;
+                break;
+        }
+
+        // Redirect to the UPI payment link
+        window.location.href = upiLink;
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
